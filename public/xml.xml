@@ -1,0 +1,75 @@
+<breakfast_menu>
+<food>
+<name>Belgian Waffles</name>
+<price>$5.95</price>
+<description>Two of our famous Belgian Waffles with plenty of real maple syrup</description>
+<calories>650</calories>
+</food>
+<food>
+<name>Strawberry Belgian Waffles</name>
+<price>$7.95</price>
+<description>Light Belgian waffles covered with strawberries and whipped cream</description>
+<calories>900</calories>
+</food>
+<food>
+<name>Berry-Berry Belgian Waffles</name>
+<price>$8.95</price>
+<description>Light Belgian waffles covered with an assortment of fresh berries and whipped cream</description>
+<calories>900</calories>
+</food>
+<food>
+<name>French Toast</name>
+<price>$4.50</price>
+<description>Thick slices made from our homemade sourdough bread</description>
+<calories>600</calories>
+</food>
+<food>
+<name>Homestyle Breakfast</name>
+<price>$6.95</price>
+<description>Two eggs, bacon or sausage, toast, and our ever-popular hash browns</description>
+<calories>950</calories>
+</food>
+</breakfast_menu>
+
+
+if(count($value) == 16){
+                        $data = new Pstock;
+                        $data->pcode = $value['pcode'];
+                        $data->ccode = $value['ccode'];
+                        $data->size = $value['size'];
+                        $data->rate = $value['rate'];
+                        $data->total_qty = $value['total_qty'];
+                        $data->amount = $value['amount'];
+                        $data->pgender = $value['pgender'];
+                        $data->pfcolor = $value['pfcolor'];
+                        $data->pscode = $value['pscode'];
+                        $data->pdesc = $value['pdesc'];
+                        $data->mrp = $value['mrp'];
+                        $data->pcategory = $value['pcategory'];
+                        $data->surplus = $value['surplus'];
+                        $data->barcodeno = $value['barcodeno'];
+                        $data->prefix = $value['prefix'];
+                        $data->hsn = $value['hsn'];
+                        $data->save();    
+                    }else{
+                        foreach($value as  $val){
+                            $data = new Pstock;
+                            $data->pcode = $val['pcode'];
+                            $data->ccode = $val['ccode'];
+                            $data->size = $val['size'];
+                            $data->rate = $val['rate'];
+                            $data->total_qty = $val['total_qty'];
+                            $data->amount = $val['amount'];
+                            $data->pgender = $val['pgender'];
+                            $data->pfcolor = $val['pfcolor'];
+                            $data->pscode = $val['pscode'];
+                            $data->pdesc = $val['pdesc'];
+                            $data->mrp = $val['mrp'];
+                            $data->pcategory = $val['pcategory'];
+                            $data->surplus = $val['surplus'];
+                            $data->barcodeno = $val['barcodeno'];
+                            $data->prefix = $val['prefix'];
+                            $data->hsn = $val['hsn'];
+                            $data->save();
+                        }    
+                    }
